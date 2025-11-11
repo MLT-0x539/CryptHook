@@ -12,8 +12,11 @@ CryptHook relies on AES in GCM mode using a 256 bit key. Keys are generated from
 The following characteristics must be changed if you are going to use this for anything reasonably secure. All configuration can be changed in crypthook.c using the following #defines.
 
 `#define KEY_SALT "changeme"`
+
 `#define IV_SALT "changeme"`
+
 `#define ITERATIONS 1000`
+
 `#define PASSPHRASE "Hello NSA"`
 
 KEY_SALT and ITERATIONS are used in the key derivation process to change the plain text passphrase into a 256 bit key.
